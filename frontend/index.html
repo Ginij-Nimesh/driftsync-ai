@@ -22,7 +22,7 @@
     </div>
 
     <div class="error-box" id="errorBox"></div>
-    <div class="loader" id="loader">Fetching PR diff, retrieving matching Markdown sections &amp; running Llama 3.1 audit...</div>
+    <div class="loader" id="loader">Fetching PR diff, retrieving matching Markdown sections &amp; running LLM audit...</div>
 
     <div class="results" id="results">
       <div class="stats-bar">
@@ -35,6 +35,14 @@
 
       <div class="summary-box" id="summaryBox"></div>
       <div id="issuesContainer"></div>
+    </div>
+
+    <div class="history-section" id="historySection" style="display: none;">
+      <div class="history-header">
+        <h2>Recent PR Audits (SQLite Log)</h2>
+        <span class="eval-badge" id="evalBadge">LLM Precision: No ratings yet</span>
+      </div>
+      <div id="historyList"></div>
     </div>
   </div>
 
