@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DriftSync AI — GitHub PR Documentation Drift Detector</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Drift<span>Sync</span> AI</h1>
+      <p>Automated GitHub Pull Request Documentation Drift Detector &bull; Hybrid Retrieval + Structured LLM Audit</p>
+    </header>
+
+    <div class="search-card">
+      <div class="input-row">
+        <input type="text" id="prUrl" placeholder="Paste public GitHub PR URL (e.g. https://github.com)" />
+        <button class="btn-primary" id="analyzeBtn" type="button">Analyze PR</button>
+        <button class="btn-secondary" id="sampleBtn" type="button">Try Sample PR</button>
+      </div>
+    </div>
+
+    <div class="error-box" id="errorBox"></div>
+    <div class="loader" id="loader">Fetching PR diff, retrieving matching Markdown sections &amp; running Llama 3.1 audit...</div>
+
+    <div class="results" id="results">
+      <div class="stats-bar">
+        <div>
+          <strong id="repoTitle"></strong>
+          <div style="color: var(--muted); font-size: 0.85rem;" id="prSubtitle"></div>
+        </div>
+        <div class="pill" id="retrievalPill"></div>
+      </div>
+
+      <div class="summary-box" id="summaryBox"></div>
+      <div id="issuesContainer"></div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
